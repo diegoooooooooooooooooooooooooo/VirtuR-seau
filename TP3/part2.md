@@ -49,47 +49,25 @@ Sending 5, 100-byte ICMP Echos to 10.3.2.1, timeout is 2 seconds:
 !!!!!
 Success rate is 100 percent (5/5), round-trip min/avg/max = 32/56/64 ms
 ```
-
 ```
 PC1> show ip
 
 NAME        : PC1[1]
 IP/MASK     : 10.3.1.1/24
-GATEWAY     : 255.255.255.0
+GATEWAY     : 10.3.1.254
 DNS         :
 MAC         : 00:50:79:66:68:00
-LPORT       : 20018
-RHOST:PORT  : 127.0.0.1:20019
-MTU         : 1500
-
-PC1> ping 10.3.1.254
-
-84 bytes from 10.3.1.254 icmp_seq=1 ttl=255 time=18.295 ms
-84 bytes from 10.3.1.254 icmp_seq=2 ttl=255 time=15.464 ms
-84 bytes from 10.3.1.254 icmp_seq=3 ttl=255 time=8.216 ms
-84 bytes from 10.3.1.254 icmp_seq=4 ttl=255 time=12.209 ms
-84 bytes from 10.3.1.254 icmp_seq=5 ttl=255 time=15.884 ms
-```
-
-```
-PC2> show ip
-
-NAME        : PC2[1]
-IP/MASK     : 10.3.2.1/24
-GATEWAY     : 255.255.255.0
-DNS         :
-MAC         : 00:50:79:66:68:01
 LPORT       : 20020
 RHOST:PORT  : 127.0.0.1:20021
 MTU         : 1500
 
-PC2> ping 10.3.2.254
+PC1> ping 10.3.2.1
 
-84 bytes from 10.3.2.254 icmp_seq=1 ttl=255 time=20.794 ms
-84 bytes from 10.3.2.254 icmp_seq=2 ttl=255 time=10.131 ms
-84 bytes from 10.3.2.254 icmp_seq=3 ttl=255 time=10.896 ms
-84 bytes from 10.3.2.254 icmp_seq=4 ttl=255 time=3.406 ms
-84 bytes from 10.3.2.254 icmp_seq=5 ttl=255 time=11.707 ms
+84 bytes from 10.3.2.1 icmp_seq=1 ttl=63 time=14.376 ms
+84 bytes from 10.3.2.1 icmp_seq=2 ttl=63 time=19.359 ms
+84 bytes from 10.3.2.1 icmp_seq=3 ttl=63 time=15.427 ms
+84 bytes from 10.3.2.1 icmp_seq=4 ttl=63 time=18.546 ms
+84 bytes from 10.3.2.1 icmp_seq=5 ttl=63 time=18.864 ms
 ```
 
 ➜ **Configuration du NAT**
